@@ -79,6 +79,9 @@
         public string BranchName { get; set; }
 
         [Output]
+        public string ShortSha { get; set; }
+
+        [Output]
         public string Sha { get; set; }
 
         [Output]

@@ -72,6 +72,9 @@
         [YamlMember(Alias = "is-mainline")]
         public bool? IsMainline { get; set; }
 
+        [YamlMember(Alias = "assembly-informational-format")]
+        public string AssemblyInformationalFormat { get; set; }
+
         /// <summary>
         /// The name given to this configuration in the config file.
         /// </summary>

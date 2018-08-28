@@ -1,5 +1,6 @@
 ﻿namespace GitVersion
 {
+    using System;
     using System.Globalization;
 
     public class SemanticVersionFormatValues
@@ -100,6 +101,11 @@
         public string BranchName
         {
             get { return _semver.BuildMetaData.Branch; }
+        }
+
+        public string ShortSha
+        {
+            get { return _semver.BuildMetaData.Sha.Substring(0, Math.Min(_semver.BuildMetaData.Sha.Length, _config.ShortShaLength)); }
         }
 
         public string Sha

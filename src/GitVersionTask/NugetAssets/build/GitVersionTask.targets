@@ -116,6 +116,7 @@
       <Output TaskParameter="FullSemVer" PropertyName="GitVersion_FullSemVer" />
       <Output TaskParameter="InformationalVersion" PropertyName="GitVersion_InformationalVersion" />
       <Output TaskParameter="BranchName" PropertyName="GitVersion_BranchName" />
+      <Output TaskParameter="ShortSha" PropertyName="GitVersion_ShortSha" />
       <Output TaskParameter="Sha" PropertyName="GitVersion_Sha" />
       <Output TaskParameter="NuGetVersionV2" PropertyName="GitVersion_NuGetVersionV2" />
       <Output TaskParameter="NuGetVersion" PropertyName="GitVersion_NuGetVersion" />

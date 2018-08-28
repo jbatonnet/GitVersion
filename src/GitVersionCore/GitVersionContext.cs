@@ -121,7 +121,7 @@
             var nextVersion = FullConfiguration.NextVersion;
             var assemblyVersioningScheme = FullConfiguration.AssemblyVersioningScheme.Value;
             var assemblyFileVersioningScheme = FullConfiguration.AssemblyFileVersioningScheme.Value;
-            var assemblyInformationalFormat = FullConfiguration.AssemblyInformationalFormat;
+            var assemblyInformationalFormat = currentBranchConfig.AssemblyInformationalFormat ?? FullConfiguration.AssemblyInformationalFormat;
             var assemblyVersioningFormat = FullConfiguration.AssemblyVersioningFormat;
             var assemblyFileVersioningFormat = FullConfiguration.AssemblyFileVersioningFormat;
             var gitTagPrefix = FullConfiguration.TagPrefix;
@@ -130,6 +130,7 @@
             var patchMessage = FullConfiguration.PatchVersionBumpMessage;
             var noBumpMessage = FullConfiguration.NoBumpMessage;
             var commitDateFormat = FullConfiguration.CommitDateFormat;
+            var shortShaLength = FullConfiguration.ShortShaLength.Value;
 
             var commitMessageVersionBump = currentBranchConfig.CommitMessageIncrementing ?? FullConfiguration.CommitMessageIncrementing.Value;
 
@@ -148,7 +149,8 @@
                 FullConfiguration.Ignore.ToFilters(),
                 currentBranchConfig.TracksReleaseBranches.Value,
                 currentBranchConfig.IsReleaseBranch.Value,
-                commitDateFormat);
+                commitDateFormat,
+                shortShaLength);
         }
 
         private static Branch GetTargetBranch(IRepository repository, string targetBranch)

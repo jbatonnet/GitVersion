@@ -18,6 +18,7 @@
                                 string buildMetaDataPadded,
                                 string fullBuildMetaData,
                                 string branchName,
+                                string shortSha,
                                 string sha,
                                 string majorMinorPatch,
                                 string semVer,
@@ -46,6 +47,7 @@
             BuildMetaDataPadded = buildMetaDataPadded;
             FullBuildMetaData = fullBuildMetaData;
             BranchName = branchName;
+            ShortSha = shortSha;
             Sha = sha;
             MajorMinorPatch = majorMinorPatch;
             SemVer = semVer;
@@ -87,6 +89,7 @@
         public string FullSemVer { get; private set; }
         public string InformationalVersion { get; private set; }
         public string BranchName { get; private set; }
+        public string ShortSha { get; private set; }
         public string Sha { get; private set; }
         public string NuGetVersionV2 { get; private set; }
         public string NuGetVersion { get; private set; }
